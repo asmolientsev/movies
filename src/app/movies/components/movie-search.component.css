@@ -1,0 +1,12 @@
+.search-result {
+	padding: 10px;
+	border-bottom: 1px solid #ccc;
+}
+.add-favorites {
+	background-color: #bbb;
+    border-radius: 5px;
+    color: green;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 3px 20px;
+}

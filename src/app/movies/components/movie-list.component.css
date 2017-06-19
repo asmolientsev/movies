@@ -1,0 +1,100 @@
+.col-25 {
+	float:left;
+	width: 25%;
+}
+.movie-list {
+	clear: both;
+	padding: 0;
+}
+.movie-block {
+	position: relative;
+}
+.movie-block > div {
+	width: 98%;
+	height: 450px;
+	position: relative;
+	background-size: cover;
+	margin: 5px;
+	border: 1px dotted #999;
+	cursor: pointer;
+}
+.movie-block div img {
+	width: 98%;
+	height: 98%; 
+}
+.movie-list, .movie-list li {
+	list-style: none;
+}
+.movie-block div.no-image {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-style: italic;
+	font-size: 16px;
+	text-align: center;
+	font-weight: bold;
+}
+.right {
+	float: right;
+}
+.order {
+	padding: 10px;
+	margin-bottom: 5px;
+	color: #666;
+	border-top: 1px dotted #999;
+	font-family: arial;
+	border-bottom: 1px dotted #999;
+}
+.clear {
+	clear: both;
+}
+.movie-block .add {
+	display: none;
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(200,200,200,0.5);
+	color: green;
+
+}
+.movie-block:hover .add {
+	display: block;
+}
+.movie-block .add div {
+	font-size: 80px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	font-weight: bold;
+}
+@media screen and (max-width: 768px){
+	.col-25 {
+		width: 50%;
+	}
+}
+@media screen and (max-width: 400px){
+	.col-25 {
+		width: 100%;
+	}
+}
+.pagination .current_page {
+	padding: 3px 8px;
+	border-radius: 100%;
+	border: 1px solid #999;
+	color: #999;
+}
+.pagination .page {
+	color: #555;
+	padding: 3px 10px;
+	cursor: pointer;
+}
+.pagination, .pagination li {
+	list-style: none;
+}
+.pagination li {
+	display: inline;
+}

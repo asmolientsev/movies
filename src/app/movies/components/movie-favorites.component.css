@@ -1,0 +1,44 @@
+.col-10 {
+	width: 10%;
+	float:left;
+}
+.movie-block {
+	position: relative;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+.movie-block > div {
+	width:100%;
+	height: 100%;
+	position: relative;
+	cursor: pointer;
+	border: 1px dotted #999;
+}
+.movie-block div img {
+	width: 98%;
+	height: 98%; 
+}
+.movie-list, .movie-list li {
+	list-style: none;
+}
+.movie-block .minus {
+	display: none;
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(200,200,200,0.5);
+	color: blue;
+}
+.movie-block:hover .minus {
+	display: block;
+}
+.minus div {
+	font-size: 60px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	font-weight: bold;
+}

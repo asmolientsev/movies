@@ -1,0 +1,22 @@
+nav {
+	border-top: 1px dotted #999;
+}
+nav a {
+	color: #666;
+	padding: 10px 30px;
+	font-size: 18px;
+	line-height: 50px;
+	font-family: arial;
+	text-decoration: none;
+}
+.clear {
+	clear: both;
+}
+.container {
+	max-width: 1290px;
+	margin: 0 auto;
+}
+nav a.active {
+	text-decoration: underline;
+	color: #222;
+}

@@ -1,0 +1,8 @@
+<ul class=movie-list>
+	<li *ngFor="let movie of movies" (click)="onSelect(movie)" class="col-10 movie-block">
+		<div  title="{{movie.title}} | {{movie.overview}}"  >
+			<img [src] = "getSafeUrl(movie.poster_path)" />
+		</div>
+		<div class="minus"><div>-</div></div>
+	</li>
+</ul>

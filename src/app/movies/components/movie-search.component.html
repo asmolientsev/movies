@@ -1,0 +1,10 @@
+<div id="search-component">
+  <h4>Movie Search</h4>
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+  <div>
+    <div *ngFor="let movie of movies | async"
+         class="search-result" title="{{movie.overview}}">
+      {{movie.title}}  <button (click)="onAddFavorite(movie)" title="Add to favorites" class="add-favorites">+</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="order">
+	<div class="right">
+		<label>Order</label>
+		<select (change)="onChangeSort($event)">
+			<option value="popularity.desc">Popularity</option>
+			<option value="release_date.descrelease_date.desc">Date realease</option>
+			<option value="revenue.desc">Revenue</option>
+			<option value="vote_average.desc">Vote avarage</option>
+			<option value="vote_count.desc">Vote count</option>
+		</select>
+	</div>
+	<div class="clear"></div>
+</div>
+
+<ul class="movie-list">
+	<li *ngFor="let movie of movies" (click)="onSelect(movie)" class="col-25 movie-block">
+		<div *ngIf="movie.poster_path" [style.background-image] = "getSafeUrl(movie.poster_path)" ></div>
+		<div *ngIf="!movie.poster_path"><div class="no-image">{{movie.title}}</div>
+		</div>
+		<div class="add" title="{{movie.title}} | {{movie.overview}}"><div>+</div></div>
+	</li>
+</ul>
+<div class="clear"></div>
+<ul class="pagination">
+	<li *ngFor="let _page of pageItems">
+		<a title="page={{ _page.index }}" class="page" *ngIf="_page.index!=page" (click)="onSelectPage(_page.index)">{{ _page.name }}</a>
+		<span class="current_page" *ngIf="_page.index==page">{{ _page.name }}</span>
+	</li>
+</ul>
